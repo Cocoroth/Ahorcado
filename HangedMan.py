@@ -7,7 +7,7 @@ class HangedMan:
         self.correct = []
         self.attempted = []
 
-    def showGameBoard(self):
+    def showGameBoard(self): #Método para mostrar los huecos de la palabra
         gameBoard = ""
         for letter in self.secretWord:
             if letter in self.correct:
@@ -16,7 +16,7 @@ class HangedMan:
                 gameBoard += "_ "
         return gameBoard
 
-    def showHangedMan(self, remainingAttempts):
+    def showHangedMan(self, remainingAttempts): #Método para mostrar el monigote
             HangedMan = ['''
       +---+
       |   |
@@ -69,10 +69,11 @@ class HangedMan:
     =========''']
             print(HangedMan[6 - remainingAttempts])
 
-    def play(self):
+    def play(self): #Esto es el esqueleto del juego, maneja intentos, status de la partida y cuando se acaba
         print("¡Bienvenido al ahorcado!")
         print(
-            "Intenta adivinar la palabra secreta introduciendo una letra o adivina la palabra, tienes un total de 6 intentos ¡pero cuidado, si adivinas la palabra y es incorrecta perderás automáticamente!")
+            "Intenta adivinar la palabra secreta introduciendo una letra o adivina la palabra, tienes un total de 6 intentos")
+        print("¡pero cuidado, si adivinas la palabra y es incorrecta perderás automáticamente!")
         print("La palabra tiene", len(self.secretWord), "letras.")
 
         while self.remainingAttempts > 0:

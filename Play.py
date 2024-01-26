@@ -1,6 +1,6 @@
 from HangedMan import HangedMan
 
-def play():
+def play(): #Este método inicia la partida y te da la opción de seguir jugando al acabar una partida
     while True:
         game = HangedMan()
         game.play()

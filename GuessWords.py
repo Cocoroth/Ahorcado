@@ -1,6 +1,6 @@
 import random
 
-class GuessWords:
+class GuessWords: #Las palabras disponibles a adivinar
     @staticmethod
     def wordSelector():
         guessWords = ["koala", "calvo", "precipicio", "experimento", "balanza"
